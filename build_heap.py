@@ -1,8 +1,38 @@
 # python3
 
 
+import math
 def build_heap(data):
     swaps = []
+    swaps = data
+    for i in range(len(data)-1,-1,-1):
+        if i%2 == 0:
+            c = i
+            while(True):
+                parent_index = math.ceil(c/2)-1
+                
+                if data[c] < data[parent_index and c!=0]:
+                    print (parent_index, " ", data[c], " " ,data[parent_index])
+                    kaste = data[c]
+                    data[c] = data[parent_index]
+                    data[parent_index] = kaste
+                    c = parent_index
+                else:
+                    break
+        elif i%2 == 1:
+            c = i
+
+            while(True):
+                parent_index = math.ceil(c/2)-1
+                if data[c] < data[parent_index] and c!=0:
+                    print (parent_index, " ", data[c], " " ,data[parent_index])
+                    kaste = data[c]
+                    data[c] = data[parent_index]
+                    data[parent_index] = kaste
+                    c = parent_index
+                else:
+                    break
+        
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
 
@@ -33,9 +63,11 @@ def main():
 
 
     # output all swaps
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+ 
+   ## for i, j in swaps:
+    ##    print(i, j)
+    for i in range(len(swaps)):
+        print (swaps[i])
 
 
 if __name__ == "__main__":
