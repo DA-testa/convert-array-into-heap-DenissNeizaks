@@ -76,7 +76,7 @@ def main():
         ##    print(i, j)
         print (int(len(swaps)/2))
         for i in range(0,len(swaps),2):
-            print (swaps[i] , " ", swaps[i+1])
+            print (swaps[i] , swaps[i+1])
     elif "F" in input_method:
         file = input()
         file = ("test/" + file)
@@ -88,7 +88,7 @@ def main():
             swaps = build_heap(data)
             print (int(len(swaps)/2))
             for i in range(0,len(swaps),2):
-                print (swaps[i] , " ", swaps[i+1])
+                print (swaps[i] , swaps[i+1])
             
         f.close()
 
@@ -96,5 +96,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
