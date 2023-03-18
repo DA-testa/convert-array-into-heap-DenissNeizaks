@@ -79,7 +79,7 @@ def main():
             print (swaps[i] , swaps[i+1])
     elif "F" in input_method:
         file = input()
-        file = ("test/" + file)
+        file = ("tests/" + file)
         
         with open(file,'r') as f:
             n = int(f.readline())
